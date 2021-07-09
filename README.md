@@ -17,7 +17,7 @@ And you have the SDKs for Android (.aar files) & iOS (framework files).
 #### Step 1: Create module by AAR file
 - See https://developer.android.com/studio/projects/android-library#psd-add-aar-jar-dependency
 - Currently, each of Payoo aar files is a module, named as image below:
-![Demo](./docs/android_modules.png)
+![Demo](./doc_images/android_modules.png)
 
 #### Step 2: Set some configuration properties
 - Add these properties into <your-root-project>/gradle.properties
@@ -121,18 +121,18 @@ Open <your-fluter-project>/ios/Runner.xcworkspace in XCode.
 #### Step 1: Create ExternalFrameworks group for your target
 - Create a new group for your Runner target, named as 'ExternalFrameworks' by adding all of framework files from Payoo. See [the docs here](https://developer.apple.com/documentation/xcode/creating-organizing-and-editing-source-files)
 - After doing this, you will see as image below.
-![Demo](./docs/ios_module.png)
+![Demo](./doc_images/ios_module.png)
 
 #### Step 2: Link ExternalFrameworks to flutter_payoo_vn target.
 See [the docs here](https://developer.apple.com/library/archive/technotes/tn2435/_index.html)
 - Choose Pods target at the left side panel.
 - See the center panel, choose the TARGETS/flutter_payoo_vn.
 - At tab Build Phases, below at Link Binary With Libraries item, click (+) button to link all of Payoo framework files. 
-![Demo](./docs/ios_module1.png)
+![Demo](./doc_images/ios_module1.png)
 
 #### Step 3: Embed ExternalFrameworks to Runner target.
 - Do the same above steps for Runner target.
-![Demo](./docs/ios_module1.png)
+![Demo](./doc_images/ios_module1.png)
 
 #### Step 4: Add NSContactsUsageDescription
 - Payoo need Contacts permission, on iOS, you need to add NSContactsUsageDescription into Info.plist. See [the docs here](https://developer.apple.com/documentation/contacts/requesting_authorization_to_access_contacts)
