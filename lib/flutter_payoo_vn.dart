@@ -32,16 +32,17 @@ class PayooVnPlugin {
 /// Contacts to your partnership member who receives this information from Payoo, for both environments: Development & Production.
 class PayooVnSettings {
   /// [merchantId] : Payoo specifics each of their partners if a merchant, with an id & [secretKey].
-  final String? merchantId;
+  final String merchantId;
 
   /// [secretKey] : this is not a sensitive key, just a client public key.
-  final String? secretKey;
+  final String secretKey;
 
   /// [isDev] : this is not used for Development environment, it's only a flag that make the SDK knows if application is in debugging/developing mode.
   final bool? isDev;
 
   /// Constructor.
-  const PayooVnSettings({this.isDev: false, this.merchantId, this.secretKey});
+  const PayooVnSettings(
+      {this.isDev: false, required this.merchantId, required this.secretKey});
 
   /// Convert to a map.
   Map<String, dynamic> toMap() {
@@ -55,8 +56,8 @@ class PayooVnSettings {
   /// Create an instance from a map.
   factory PayooVnSettings.fromMap(Map<String, dynamic> map) {
     return new PayooVnSettings(
-      merchantId: map['merchantId'] as String?,
-      secretKey: map['secretKey'] as String?,
+      merchantId: map['merchantId'] as String,
+      secretKey: map['secretKey'] as String,
       isDev: map['isDev'] as bool?,
     );
   }
