@@ -20,7 +20,7 @@ flutter:
   plugin:
     platforms:
       android:
-        package: vn.payoo.payoo_vn_plugin
+        package: vn.payoo.flutter
         pluginClass: PayooVnPlugin
       ios:
         pluginClass: PayooVnPlugin

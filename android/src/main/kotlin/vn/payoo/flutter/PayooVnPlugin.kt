@@ -1,4 +1,4 @@
-package vn.payoo.payoo_vn_plugin
+package vn.payoo.flutter
 
 import android.app.Activity
 import android.util.Log

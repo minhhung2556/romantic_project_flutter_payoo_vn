@@ -67,19 +67,6 @@ android {
             signingConfig signingConfigs.debug
         }
     }
-
-    flavorDimensions "app"
-
-    productFlavors {
-        prodvn {
-            dimension "app"
-            resValue "string", "payoo_protocol_scheme", payooSchemeDev
-        }
-        fakevn {
-            dimension "app"
-            resValue "string", "payoo_protocol_scheme", payooSchemeProd
-        }
-    }
 }
 
 flutter {

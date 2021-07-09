@@ -10,7 +10,7 @@ if (globalPropertiesFile.exists()) {
 def rootProjectDir = rootProject.projectDir
 def nativeSDkDir = globalProperties.getProperty('payoo.vn.native.sdk.dir')
 println "rootProjectDir: ${rootProjectDir}"
-println "nativeSDkDir: ${rootProjectDir}"
+println "nativeSDkDir: ${nativeSDkDir}"
 
 include ':payoo_core'
 include ':payoo_payment'

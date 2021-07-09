@@ -1,4 +1,4 @@
-package vn.payoo.payoo_vn_plugin
+package vn.payoo.flutter
 
 /**
  * Current supported services from Payoo SDK.
