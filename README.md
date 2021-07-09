@@ -1,6 +1,6 @@
-# flutter_payoo_vn
+# Flutter Payoo VN plugin
 
-This plugin helps in integrating the [Payoo](https://payoo.vn) native mobile SDK into Flutter application project.
+This plugin helps in integrating the [Payoo](https://payoo.vn) native mobile SDK into a Flutter application project.
 Currently, Payoo supports only Android & iOS platform.
 This is only a wrapper that helps a Flutter Application can interact with the Payoo native mobile SDK by using MethodChannel. It does not contain any Payoo source code or SDK artifacts (.aar files on Android, and .framework files on iOS).
 
