@@ -144,6 +144,10 @@ func toJsonString(data: [String : Any?]?) -> String {
     return myJsonString
 }
 
+/**
+ * Current supported services from Payoo SDK.
+ * These are exactly ids defined by Payoo.
+ */
 enum PayooServiceIds : String {
     case topup = "topup", electric = "DIEN", water = "NUOC"
     

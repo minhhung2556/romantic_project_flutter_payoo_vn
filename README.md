@@ -1,11 +1,10 @@
 # flutter_payoo_vn
 
 This plugin helps in integrating the [Payoo](https://payoo.vn) native mobile SDK into Flutter application project.
-Currently, Payoo supports only Android & iOS platforms.
-It is only a wrapper that helps a Flutter Application can interact with the Payoo native mobile SDK by using MethodChannel.
-It does not contain any Payoo source code or SDK artifacts (.aar files on Android, and .framework files on iOS).
+Currently, Payoo supports only Android & iOS platform.
+This is only a wrapper that helps a Flutter Application can interact with the Payoo native mobile SDK by using MethodChannel. It does not contain any Payoo source code or SDK artifacts (.aar files on Android, and .framework files on iOS).
 
-It is a present from Romantic Project. More from [Romantic Developer](https://pub.dev/publishers/romanticdeveloper.com/packages)
+This is a present from Romantic Project. More from [Romantic Developer](https://pub.dev/publishers/romanticdeveloper.com/packages)
 
 ## Getting Started
 
@@ -15,7 +14,7 @@ And you have the SDKs for Android (.aar files) & iOS (framework files).
 ### Setup for Android
 
 #### Step 1: Create module by AAR file
-- See https://developer.android.com/studio/projects/android-library#psd-add-aar-jar-dependency
+- See [the docs here](https://developer.android.com/studio/projects/android-library#psd-add-aar-jar-dependency)
 - Currently, each of Payoo aar files is a module, named as image below:
 ![Demo](./doc_images/android_modules.png)
 

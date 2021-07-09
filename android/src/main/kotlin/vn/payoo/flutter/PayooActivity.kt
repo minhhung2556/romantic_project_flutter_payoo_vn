@@ -18,7 +18,6 @@ import vn.payoo.topupsdk.data.model.response.TopupResultResponse
 /**
  * This class is necessary for Payoo because they force the type of current activity of application is [AppCompatActivity]
  * Why don't they use just [android.app.Activity] or [androidx.fragment.app.FragmentActivity] ? They are base classes which must to use.
- * So we must do stupid work for this stupid sdk.
  */
 class PayooActivity : AppCompatActivity(), PayooTopupSDK.OnTopupResultListener, PayooPaybillSDK.OnPaybillResultListener {
     companion object {
