@@ -19,14 +19,14 @@ And you have the SDKs for Android (.aar files) & iOS (framework files).
 ![Demo](./doc_images/android_modules.png)
 
 #### Step 2: Set some configuration properties
-- Add these properties into <your-root-project>/gradle.properties
+- Add these properties into your-flutter-project/android/gradle.properties
 ```properties
 payoo.vn.native.sdk.dir=<directory-contains-the-payoo-android-modules>
 payoo.vn.protocol.scheme.dev=<your-protocol-scheme-for-development-env>
 payoo.vn.protocol.scheme.prod=<your-protocol-scheme-for-production-env>
 ```
 
-- Add below code into <your-flutter-project>/android/build.gradle
+- Add below code into your-flutter-project/android/build.gradle
 ```groovy
 buildscript {
     ext.kotlin_version = '1.3.50'
@@ -52,7 +52,7 @@ rootProject.allprojects {
 }
 ```
 
-- Add below code into <your-flutter-project>/android/app/build.gradle
+- Add below code into your-flutter-project/android/app/build.gradle
 ```groovy
 def globalProperties = new Properties()
 def globalPropertiesFile = new File(rootProject.projectDir, "gradle.properties")
@@ -115,7 +115,7 @@ dependencies {
 - Enable MultipleDex as well. See [the docs here](https://developer.android.com/studio/build/multidex)
 
 ### Setup for iOS
-Open <your-fluter-project>/ios/Runner.xcworkspace in XCode.
+Open your-flutter-project/ios/Runner.xcworkspace in XCode.
 
 #### Step 1: Create ExternalFrameworks group for your target
 - Create a new group for your Runner target, named as 'ExternalFrameworks' by adding all of framework files from Payoo. See [the docs here](https://developer.apple.com/documentation/xcode/creating-organizing-and-editing-source-files)
