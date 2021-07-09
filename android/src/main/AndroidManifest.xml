@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="vn.payoo.payoo_vn_plugin">
+
+    <application
+        android:supportsRtl="true"
+        tools:replace="android:supportsRtl">
+        <activity android:name=".PayooActivity"></activity>
+        <activity
+            android:name="vn.payoo.paymentsdk.ui.home.PayooPaymentSDKActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/PayooSdkTheme"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="postbacksdkurl"
+                    android:scheme="@string/payoo_protocol_scheme" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

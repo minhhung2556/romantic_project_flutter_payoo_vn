@@ -1,0 +1,23 @@
+def globalProperties = new Properties()
+def globalPropertiesFile = new File(rootProject.projectDir, "gradle.properties")
+println "propertiesFile: ${globalPropertiesFile}"
+if (globalPropertiesFile.exists()) {
+    globalPropertiesFile.withReader('UTF-8') { reader ->
+        globalProperties.load(reader)
+    }
+}
+
+def rootProjectDir = rootProject.projectDir
+def nativeSDkDir = globalProperties.getProperty('payoo.vn.native.sdk.dir')
+println "rootProjectDir: ${rootProjectDir}"
+println "nativeSDkDir: ${rootProjectDir}"
+
+include ':payoo_core'
+include ':payoo_payment'
+include ':payoo_topup'
+include ':payoo_paybill'
+
+project(':payoo_core').projectDir = new File(rootProjectDir, "$nativeSDkDir/payoo_core")
+project(':payoo_payment').projectDir = new File(rootProjectDir, "$nativeSDkDir/payoo_payment")
+project(':payoo_topup').projectDir = new File(rootProjectDir, "$nativeSDkDir/payoo_topup")
+project(':payoo_paybill').projectDir = new File(rootProjectDir, "$nativeSDkDir/payoo_paybill")
