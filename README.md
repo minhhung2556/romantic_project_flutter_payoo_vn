@@ -114,6 +114,43 @@ dependencies {
 
 - Enable MultipleDex as well. See [the docs here](https://developer.android.com/studio/build/multidex)
 
+#### Step 3: Update Proguard rules
+- Add below lines to <your-proguard-rules>.pro file.
+```
+#------------ Start Proguard rules for payoo_vn ----------------#
+####################################################################################
+# PAYMENT SDK
+####################################################################################
+-keep class vn.payoo.core.** { *; }
+-dontwarn vn.payoo.core.**
+-keepclassmembers enum vn.payoo.core.** { *; }
+
+-keep class vn.payoo.model.** { *; }
+-dontwarn vn.payoo.model.**
+-keepclassmembers enum vn.payoo.model.** { *; }
+
+-keep class vn.payoo.paymentsdk.PayooPaymentSDK {
+    public static <methods>;
+}
+-keepclassmembers class vn.payoo.paymentsdk.PayooPaymentSDK {
+   public static ** Companion;
+}
+-keepclassmembers enum vn.payoo.paymentsdk.** { *; }
+
+####################################################################################
+# DATA EXCEPTION
+####################################################################################
+-keep class vn.payoo.paymentsdk.data.exception.** { *; }
+-dontwarn vn.payoo.paymentsdk.data.exception.**
+
+####################################################################################
+# DATA MODEL
+####################################################################################
+-keep class vn.payoo.paymentsdk.data.model.** { *; }
+-dontwarn vn.payoo.paymentsdk.data.model.**
+#------------ End Proguard rules for payoo_vn ----------------#
+```
+
 ### Setup for iOS
 Open your-flutter-project/ios/Runner.xcworkspace in XCode.
 
